@@ -9,7 +9,11 @@ spec:
   containers:
     - name: nginx-container
       image: nginx
+      env:
+        - name: NGNIX_PASSWORD
+          value: amit
 
+# env value is just learning not required
 # kubectl create -f nginx-pod-defination.yml
 # kubectl get pods
 # kubectl describe pod nginx-pod
