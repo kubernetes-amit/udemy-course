@@ -11,7 +11,7 @@ spec:
       name: nginx-pod
       labels:
         app: nginx-app
-        type: front-end
+        tier: front-end-prod
     spec:
       containers:
         - name: nginx-container
@@ -19,4 +19,4 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      type: front-end
+      tier: front-end-prod
