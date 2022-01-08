@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: app-pod
+  labels:
+    tier: prod
+    app: front-end
+spec:
+  containers:
+    - name: app-container
+      image: nginx
+      securityContext:
+        runAsUser: User1010
+        capabilities:
+          add: ["MAC_ADMIN"]
+      ports:
+        - containerPort: 8080
